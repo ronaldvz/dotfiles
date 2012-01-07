@@ -1,0 +1,13 @@
+call pathogen#infect()
+
+
+syntax on			"set syntax highlighting
+set tabstop=4 		"set tab distance to 4 chars
+set shiftwidth=4 	"number of spaces to use when indenting
+set smartcase		"ignore case if search pattern is all lowercase, case-sensitive otherwise
+
+
+set incsearch 		"show search matches as you type
+
+
+filetype plugin indent on 	"use pathogen

@@ -1,0 +1,3 @@
+PATH=/usr/local/bin:$PATH
+export PATH
+export ANDROID_HOME=`brew --prefix android`

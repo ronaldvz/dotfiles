@@ -22,15 +22,18 @@ set background=dark
 color jellybeans
 
 syntax on									" Enable syntax hightlighting
+set visualbell								" Prevent 'sound': no beeping.
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4							" Using 4 spaces when hitting 'tab' in INSERT mode
 set smartcase
 set incsearch
 set number 									" Enables line numbers
 
-set ignorecase      						" Searches are case insensitive...
+set ignorecase								" Searches are case insensitive...
 set autoindent								" Automatically indent
-set smartindent 							" Do smart indenting
+set smartindent								" Do smart indenting
+set showcmd
 
 " Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer
@@ -39,7 +42,7 @@ nmap <silent> ;' :tabnext<CR> " Next tab
 nmap <silent> ;l :tabprev<CR> " Previous tab
 
 " Setting backup dirs and disabling swapping
-set backupdir=~/.vim/backup// 				" where to put backup files.
-set directory=~/.vim/tmp// 					" where to put swap files.
-set nobackup 								" disable backups
-set noswapfile 								" disable swap files
+set backupdir=~/.vim/backup//				" where to put backup files.
+set directory=~/.vim/tmp//					" where to put swap files.
+set nobackup								" disable backups
+set noswapfile								" disable swap files

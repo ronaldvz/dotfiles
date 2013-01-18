@@ -1,13 +1,47 @@
-call pathogen#infect()
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+filetype plugin indent on     " required!
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'kein/ctrlp.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'darkburn'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'darkbone.vim'
+
+syntax on
+set term=screen-256color
+set t_Co=256
+set background=dark
+color jellybeans
+
+set tabstop=4
+set shiftwidth=4
+set smartcase
+set incsearch
+
+set number "line numbers
+
+set ignorecase                                  " searches are case insensitive...
+set autoindent " Automatically indent
+set smartindent " Do smart indenting
 
 
-syntax on			"set syntax highlighting
-set tabstop=4 		"set tab distance to 4 chars
-set shiftwidth=4 	"number of spaces to use when indenting
-set smartcase		"ignore case if search pattern is all lowercase, case-sensitive otherwise
+" Easy buffer navigation
+nmap <silent> ,. :bnext<CR> " Next buffer
+nmap <silent> ,m :bprev<CR> " Previous buffer
+nmap <silent> ;' :tabnext<CR> " Next tab
+nmap <silent> ;l :tabprev<CR> " Previous tab
 
-
-set incsearch 		"show search matches as you type
-
-
-filetype plugin indent on 	"use pathogen
+" Setting backup dirs and disabling swapping
+set backupdir=~/.vim/backup// " where to put backup files.
+set directory=~/.vim/tmp// " where to put swap files.
+set nobackup " disable backups
+set noswapfile " disable swap files

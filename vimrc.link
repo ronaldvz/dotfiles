@@ -1,40 +1,38 @@
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off                   " required for Vundle to work
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-filetype plugin indent on     " required!
+filetype plugin indent on     " required for Vundle to work
 
-" let Vundle manage Vundle
-" required! 
+"Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
-
 Bundle 'kein/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'darkburn'
 Bundle 'bronson/vim-trailing-whitespace'
+
+" Bundles on vim.org to be managed by Vundle
 Bundle 'darkbone.vim'
 
-syntax on
+" Basic settings
 set term=screen-256color
 set t_Co=256
 set background=dark
 color jellybeans
 
+syntax on
 set tabstop=4
 set shiftwidth=4
 set smartcase
 set incsearch
+set number 			" Enables line numbers
 
-set number "line numbers
+set ignorecase      " Searches are case insensitive...
+set autoindent		" Automatically indent
+set smartindent 	" Do smart indenting
 
-set ignorecase                                  " searches are case insensitive...
-set autoindent " Automatically indent
-set smartindent " Do smart indenting
-
-
-" Easy buffer navigation
+" Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer
 nmap <silent> ,m :bprev<CR> " Previous buffer
 nmap <silent> ;' :tabnext<CR> " Next tab

@@ -1,9 +1,17 @@
 #ronald's bash profile 
 
+#ls aliases
 alias ls='ls -lG'
 alias ll='ls -l'
 alias lsa='ls -all'
 
+#git aliases
+alias g='git'
+alias gs='git status -s'
+alias gc='git commit'
+alias gd='git diff'
+
+#dirs
 alias ~='cd ~'
 alias dev='cd ~/development'
 

@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'tpope/vim-fugitive'
 
 " Bundles on vim.org to be managed by Vundle
 Bundle 'darkbone.vim'

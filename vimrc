@@ -33,7 +33,8 @@ set number 									" Enables line numbers
 set ignorecase								" Searches are case insensitive...
 set autoindent								" Automatically indent
 set smartindent								" Do smart indenting
-set showcmd
+
+set autoread								" Autoread changed files"
 
 " Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer

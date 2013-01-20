@@ -8,7 +8,7 @@ filetype plugin indent on     				" required for Vundle to work
 
 " Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
-Bundle 'kein/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 

@@ -22,5 +22,14 @@ if [ -f ~/.bashrc ]; then
 fi
 
 #added for ruby version changes
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -f ~/.rbenv ];
+then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+fi
+
+# Check for local .bash configuration
+if [ -f ~/.bash_profile.local ];
+then
+	 source ~/.bash_profile.local
+fi

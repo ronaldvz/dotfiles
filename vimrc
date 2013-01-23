@@ -12,9 +12,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
 
 " Bundles on vim.org to be managed by Vundle
-Bundle 'darkbone.vim'
 
 " Basic settings
 set term=screen-256color

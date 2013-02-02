@@ -13,7 +13,6 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
-Bundle 'vim-scripts/java_checkstyle.vim'
 Bundle 'scrooloose/syntastic'
 
 " Bundles on vim.org to be managed by Vundle

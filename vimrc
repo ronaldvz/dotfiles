@@ -10,10 +10,10 @@ filetype plugin indent on     				" required for Vundle to work
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'bronson/vim-trailing-whitespace'
+"Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 
 " Bundles on vim.org to be managed by Vundle
 
@@ -49,3 +49,13 @@ set backupdir=~/.vim/backup//				" where to put backup files.
 set directory=~/.vim/tmp//					" where to put swap files.
 set nobackup								" disable backups
 set noswapfile								" disable swap files
+
+" Keybindings
+" Ctrl-N for enabling / disabling line numbers
+:nnoremap <C-N><C-N> :set invnumber<CR>
+
+" Ctrl-W for enabling / disablig line wrapping
+:nnoremap <C-w><C-w> :set invwrap<CR>
+
+" Ctrl-P twice for enabling pasting, without vim doing reformatting and stuff
+:nnoremap <C-p><C-p> :set invpaste<CR>

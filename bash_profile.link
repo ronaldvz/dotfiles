@@ -13,6 +13,9 @@ alias gd='git diff'
 alias ga='git add'
 alias gp='git push'
 
+alias gcoloron='git config --local --add color.ui true'
+alias gcoloroff='git config --local --add color.ui false'
+
 #dirs
 alias ~='cd ~'
 alias dev='cd ~/development'

@@ -9,21 +9,21 @@ filetype plugin indent on     				" required for Vundle to work
 " Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'nanotech/jellybeans.vim'
-"Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
-"Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
 
 " Bundles on vim.org to be managed by Vundle
-
-" Basic settings
-set term=screen-256color
-set t_Co=256
-set background=dark
-color jellybeans
+" -- None at the moment
 
 syntax on									" Enable syntax hightlighting
+set background=dark
+" Basic settings
+let g:solarized_termtrans = 1
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+
 set visualbell								" Prevent 'sound': no beeping.
 set tabstop=4
 set shiftwidth=4

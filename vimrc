@@ -55,7 +55,7 @@ set noswapfile								" disable swap files
 :nnoremap <C-N><C-N> :set invnumber<CR>
 
 " Ctrl-W for enabling / disablig line wrapping
-:nnoremap <C-w><C-w> :set invwrap<CR>
+":nnoremap <C-w><C-w> :set invwrap<CR>
 
 " Ctrl-P twice for enabling pasting, without vim doing reformatting and stuff
 :nnoremap <C-p><C-p> :set invpaste<CR>

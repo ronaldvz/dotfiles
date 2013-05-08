@@ -39,5 +39,5 @@ fi
 
 if [ -f ~/.rvm/scripts/rvm ];
 then
-	source /Users/ronald/.rvm/scripts/rvm
+	source ~/.rvm/scripts/rvm
 fi

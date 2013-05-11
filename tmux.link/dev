@@ -1,6 +1,7 @@
 # Creating dev layout
-selectp -t 0 #select first pane
-splitw -v -p 70 #split vertically by 70%
+selectp -t 0 # select first pane
+splitw -h -p 40 # split vertically by 70%
 
-selectp -t 1 #select second pane
-splitw -h -p 50 #split it in two halves
+selectp -t 1 # select second pane
+splitw -v -p 50 'cmus' # split it in two halves and start cmus in the last created pane
+selectp -t 0 # select first pane to get crackin'

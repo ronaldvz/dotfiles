@@ -24,6 +24,10 @@ bind-key _ split-window -v
 set -g set-titles on
 set -g set-titles-string '#S:#I.#P #W'
 
+# Mouse support for certain use-cases
+set-window-option -g mode-mouse on
+set -g history-limit 50000
+
 # Reload tmux config
 bind r source-file ~/.tmux.conf
 

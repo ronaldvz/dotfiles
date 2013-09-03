@@ -12,6 +12,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'airblade/vim-gitgutter'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment

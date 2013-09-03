@@ -1,7 +1,7 @@
 #ronald's bash profile 
 
 #ls aliases
-alias ls='ls -lG'
+alias ls='ls -lGsa'
 alias ll='ls -l'
 alias lsa='ls -all'
 
@@ -15,6 +15,9 @@ alias gp='git push'
 
 alias gcoloron='git config --local --add color.ui true'
 alias gcoloroff='git config --local --add color.ui false'
+
+alias ta='tmux attach'
+alias td='tmux detach'
 
 #dirs
 alias ~='cd ~'
@@ -41,3 +44,6 @@ if [ -f ~/.rvm/scripts/rvm ];
 then
 	source ~/.rvm/scripts/rvm
 fi
+
+# needed for macports:
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH

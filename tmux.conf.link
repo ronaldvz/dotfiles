@@ -8,6 +8,7 @@ setw -g monitor-activity on
 set -g visual-activity on
 
 bind D source-file ~/.tmux/dev
+bind T source-file ~/.tmux/tw
 
 # Pane selection with Vim keys
 bind-key h select-pane -L
@@ -27,15 +28,29 @@ set -g set-titles-string '#S:#I.#P #W'
 # Mouse support for certain use-cases
 set-window-option -g mode-mouse on
 set -g history-limit 50000
+set-option -g mouse-utf8 on
+
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
 
 # Reload tmux config
 bind r source-file ~/.tmux.conf
 
 # Colors
 # default statusbar colors
-set-option -g status-bg colour20 
-set-option -g status-fg colour250
+set-option -g status-bg colour235
+#set-option -g status-bg colour20 
+set-option -g status-fg colour136
+#set-option -g status-fg colour250
 set-option -g status-attr default
 
 #clock color
 set-window-option -g clock-mode-colour colour64 #green
+
+set-option -g status-left "#(date)"
+set-option -g status-right "#(date) |#[fg=colour136]#(uptime |sed 's/^.*users,//')"
+set-option -g status-right-length 80
+
+set-option -g automatic-rename off
+
+set-window-option -g window-status-current-bg blue

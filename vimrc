@@ -4,7 +4,7 @@ filetype off                          " required for Vundle to work
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-filetype plugin indent on     				" required for Vundle to work
+filetype plugin indent on             " required for Vundle to work
 
 " Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'

@@ -1,6 +1,6 @@
 set nocompatible
-filetype off		" required for Vundle to work
-
+filetype off                          " required for Vundle to work
+                                
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -17,7 +17,7 @@ Bundle 'airblade/vim-gitgutter'
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
 
-syntax on									" Enable syntax hightlighting
+syntax on                             " Enable syntax hightlighting
 set background=dark
 " Basic settings
 let g:solarized_termtrans = 1
@@ -25,19 +25,20 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
 
-set visualbell								" Prevent 'sound': no beeping.
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4							" Using 4 spaces when hitting 'tab' in INSERT mode
+set visualbell                        " Prevent 'sound': no beeping.
+set tabstop=2
+set expandtab                         " Use spaces, not tabs
+set shiftwidth=2
+set softtabstop=2                     " Using 4 spaces when hitting 'tab' in INSERT mode
 set smartcase
 set incsearch
-set number 									" Enables line numbers
+set number                            " Enables line numbers
 
-set ignorecase								" Searches are case insensitive...
-set autoindent								" Automatically indent
-set smartindent								" Do smart indenting
+set ignorecase                        " Searches are case insensitive...
+set autoindent                        " Automatically indent
+set smartindent                       " Do smart indenting
 
-set autoread								" Autoread changed files
+set autoread                          " Autoread changed files
 
 " Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer
@@ -46,10 +47,10 @@ nmap <silent> ;' :tabnext<CR> " Next tab
 nmap <silent> ;l :tabprev<CR> " Previous tab
 
 " Setting backup dirs and disabling swapping
-set backupdir=~/.vim/backup//				" where to put backup files.
-set directory=~/.vim/tmp//					" where to put swap files.
-set nobackup								" disable backups
-set noswapfile								" disable swap files
+set backupdir=~/.vim/backup//         " where to put backup files.
+set directory=~/.vim/tmp//            " where to put swap files.
+set nobackup                          " disable backups
+set noswapfile                        " disable swap files
 
 " Keybindings
 " Ctrl-N for enabling / disabling line numbers

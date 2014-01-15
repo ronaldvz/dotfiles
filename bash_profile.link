@@ -1,7 +1,7 @@
 #ronald's bash profile 
 
 #ls aliases
-alias ls='ls -lGsa'
+alias ls='ls -lhGsa'
 alias ll='ls -l'
 alias lsa='ls -all'
 

@@ -13,6 +13,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Lokaltog/powerline'
+Bundle 'lechill/json'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -61,3 +63,7 @@ set noswapfile                        " disable swap files
 
 " Ctrl-P twice for enabling pasting, without vim doing reformatting and stuff
 :nnoremap <C-p><C-p> :set invpaste<CR>
+
+" Powerline settings
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set laststatus=2

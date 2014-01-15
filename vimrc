@@ -66,4 +66,7 @@ set noswapfile                        " disable swap files
 
 " Powerline settings
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2
+set encoding=utf-8
+let g:Powerline_symbols = 'fancy'
+set laststatus=2                      " always display powerline in all windows
+set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline

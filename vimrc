@@ -14,7 +14,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/powerline'
-Bundle 'lechill/json'
+Bundle 'leshill/vim-json'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment

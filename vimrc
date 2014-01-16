@@ -14,7 +14,6 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/powerline'
-Bundle 'leshill/vim-json'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -70,3 +69,6 @@ set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
 set laststatus=2                      " always display powerline in all windows
 set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
+
+" Add basic Json syntax highlighting (without using plugins)
+autocmd BufNewFile,BufRead *.json set ft=javascript

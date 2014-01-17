@@ -7,7 +7,7 @@ alias lsa='ls -all'
 
 #git aliases
 alias g='git'
-alias gs='git status -s'
+alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gp='git push'

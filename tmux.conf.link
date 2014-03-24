@@ -42,8 +42,8 @@ set-option -g status-attr default
 #clock color
 set-window-option -g clock-mode-colour colour64 #green
 
-set-option -g status-left "#(date)"
-set-option -g status-right "#(date) |#[fg=colour136]#(uptime |sed 's/^.*users,//')"
+set-option -g status-left ""
+set-option -g status-right "Session: #S | #(date) |#[fg=colour136]#(uptime |sed 's/^.*users,//')"
 set-option -g status-right-length 80
 
 set-option -g automatic-rename off

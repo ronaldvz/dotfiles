@@ -1,0 +1,52 @@
+# 
+# ronald's zsh config
+#
+# Most of this has been shamelessly 'stolen' from:
+# - https://github.com/mattijs/.files
+#
+ZSH="$HOME/.dotfiles/zsh"
+
+#add own bin dir to path
+export PATH="$PATH:/Users/ronald/bin"
+
+C=$(tput colors)
+
+export EDITOR=vim
+export BROWSER=google-chrome
+
+#set options
+source $ZSH/options.zsh
+
+autoload -Uz colors promptinit zmv zargs vcs_info
+colors && promptinit
+
+case $TERM in
+    *xterm*|*rxvt*|*screen*)
+        # Special function precmd, executed before displaying each prompt.
+        function precmd() {
+            # Set the terminal title to the current working directory.
+            print -Pn "\e]0;%n@%m:%~\a"
+
+            # Get the current git branch into the prompt.
+            vcs_info
+        }
+
+        # Special function preexec, executed before running each command.
+        function preexec () {
+            # Set the terminal title to the curently running command.
+            print -Pn "\e]2;[${2:q}]\a"
+        }
+esac
+
+## load aliases
+source $ZSH/aliases.zsh
+
+source $ZSH/prompt.zsh
+
+# ###
+# Check for local .zshrc configuration at `~/.zshrc.local`
+# ###
+if [[ -a $HOME/.zshrc.local ]];
+then
+ source $HOME/.zshrc.local
+fi

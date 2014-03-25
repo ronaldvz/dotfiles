@@ -6,10 +6,10 @@
 #
 ZSH="$HOME/.dotfiles/zsh"
 
-#add own bin dir to path
-export PATH=":/Users/ronald/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin"
-
 C=$(tput colors)
+
+# setting default path, with ~/bin dir up front
+PATH="/Users/ronald/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/sbin:/usr/local/bin"
 
 export EDITOR=vim
 export BROWSER=google-chrome

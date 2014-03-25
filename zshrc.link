@@ -7,7 +7,7 @@
 ZSH="$HOME/.dotfiles/zsh"
 
 #add own bin dir to path
-export PATH="$PATH:/Users/ronald/bin"
+export PATH=":/Users/ronald/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin"
 
 C=$(tput colors)
 

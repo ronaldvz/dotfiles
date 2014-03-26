@@ -43,6 +43,10 @@ source $ZSH/aliases.zsh
 
 source $ZSH/prompt.zsh
 
+source $ZSH/completion.zsh
+
+source $ZSH/keybindings.zsh
+
 # ###
 # Check for local .zshrc configuration at `~/.zshrc.local`
 # ###

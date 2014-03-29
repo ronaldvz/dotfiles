@@ -91,3 +91,6 @@ set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
 set laststatus=2                      " always display powerline in all windows
 set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
+
+" Delimitmate settings
+let delimitMate_expand_cr = 1         " add an extra line after expanding my opening quote

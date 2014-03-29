@@ -14,6 +14,8 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/powerline'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'Yggdroot/indentLine'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -30,9 +32,11 @@ set visualbell                        " Prevent 'sound': no beeping.
 set tabstop=2
 set expandtab                         " Use spaces, not tabs
 set shiftwidth=2
-set softtabstop=2                     " Using 4 spaces when hitting 'tab' in INSERT mode
-set smartcase
-set incsearch
+set softtabstop=2                     " Using 2 spaces when hitting 'tab' in INSERT mode
+set hlsearch                          " Hightlight searchhits
+set incsearch                         " Searchs are incremental
+set smartcase                         " ...unless they contain at least one capital letter
+
 set number                            " Enables line numbers
 
 set ignorecase                        " Searches are case insensitive...
@@ -72,3 +76,13 @@ set noshowmode                        " hide default text mode text (e.g. -- INS
 
 " Add basic Json syntax highlighting (without using plugins)
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+
+" Plugin bindings
+
+" CTRL-P
+map <Leader>b :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = {
+ \ 'file': '\v[\/]\.(git|hg|svn)$',
+ \ 'dir': 'doc|target',
+ \ }

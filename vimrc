@@ -16,6 +16,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Raimondi/delimitMate'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment

@@ -10,15 +10,17 @@ filetype plugin indent on             " required for Vundle to work
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
+"Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/powerline'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'Yggdroot/indentLine'
+Bundle 'scrooloose/nerdtree'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
+
+" Bundles to be tested
+" Bundle 'majutsushi/tagbar'
 
 syntax on                             " Enable syntax hightlighting
 set background=dark
@@ -67,18 +69,12 @@ set noswapfile                        " disable swap files
 " Ctrl-P twice for enabling pasting, without vim doing reformatting and stuff
 :nnoremap <C-p><C-p> :set invpaste<CR>
 
-" Powerline settings
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set encoding=utf-8
-let g:Powerline_symbols = 'fancy'
-set laststatus=2                      " always display powerline in all windows
-set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
-
 " Add basic Json syntax highlighting (without using plugins)
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
-
+" ###
 " Plugin bindings
+" ###
 
 " CTRL-P
 map <Leader>b :CtrlPBuffer<cr>
@@ -86,3 +82,10 @@ let g:ctrlp_custom_ignore = {
  \ 'file': '\v[\/]\.(git|hg|svn)$',
  \ 'dir': 'doc|target',
  \ }
+
+" Powerline settings
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set encoding=utf-8
+let g:Powerline_symbols = 'fancy'
+set laststatus=2                      " always display powerline in all windows
+set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline

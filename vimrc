@@ -14,6 +14,7 @@ Bundle 'tpope/vim-surround'
 "Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'airblade/vim-rooter'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
@@ -84,6 +85,8 @@ let g:ctrlp_custom_ignore = {
  \ 'file': '\v[\/]\.(git|hg|svn)$',
  \ 'dir': 'doc|target',
  \ }
+" disable caching
+let g:ctrlp_use_caching=0
 
 " Powerline settings
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim

@@ -18,10 +18,12 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
-Bundle 'junegunn/goyo'
+Bundle 'junegunn/goyo.vim'
+Bundle 'amix/vim-zenroom2'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'cschlueter/vim-mustang'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -102,3 +104,9 @@ let delimitMate_expand_cr = 1         " add an extra line after expanding my ope
 
 " TagBar settings
 :nmap <C-t>  :TagbarToggle<CR>
+
+" Goyo (zenroom) settings
+"" Map Goyo toggle to <Leader> + spacebar
+:nmap <C-z> :Goyo<CR>  
+let g:goyo_width = '110'
+

@@ -11,19 +11,21 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-"Bundle 'msanders/snipmate.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'airblade/vim-rooter'
 Bundle 'Lokaltog/powerline'
+Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
+Bundle 'junegunn/goyo'
+
+" Colors
+Bundle 'altercation/vim-colors-solarized'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
 
-" Bundles to be tested
-Bundle 'majutsushi/tagbar'
 
 syntax on                             " Enable syntax hightlighting
 set background=dark

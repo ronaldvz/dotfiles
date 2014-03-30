@@ -21,3 +21,5 @@ alias j6="export JAVA_HOME=`/usr/libexec/java_home -v 1.6`; echo 'JAVA_HOME has 
 alias j7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; echo 'JAVA_HOME has been set to `/usr/libexec/java_home -v 1.7`'"
 
 alias zc='vim ~/.zshrc ~/.zsh/*'
+
+alias dot='cd ~/.dotfiles; ls'

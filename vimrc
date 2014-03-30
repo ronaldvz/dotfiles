@@ -28,7 +28,6 @@ Bundle 'cschlueter/vim-mustang'
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
 
-
 syntax on                             " Enable syntax hightlighting
 set background=dark
 " Basic settings
@@ -53,6 +52,8 @@ set autoindent                        " Automatically indent
 set smartindent                       " Do smart indenting
 
 set autoread                          " Autoread changed files
+
+set foldenable
 
 " Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer
@@ -110,3 +111,11 @@ let delimitMate_expand_cr = 1         " add an extra line after expanding my ope
 :nmap <C-z> :Goyo<CR>  
 let g:goyo_width = '110'
 
+" NERDTree
+let NERDTreeWinSize=50              " NERDTree window size
+let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_open_on_console_startup=0
+let g:nerdtree_tabs_autoclose=1
+let g:nerdtree_tabs_synchronize_view=1
+map <C-n> :NERDTreeToggle<CR> 
+map <C-f> :NERDTreeFind<CR>

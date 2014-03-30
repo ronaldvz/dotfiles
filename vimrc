@@ -23,7 +23,7 @@ Bundle 'Raimondi/delimitMate'
 " -- None at the moment
 
 " Bundles to be tested
-" Bundle 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 
 syntax on                             " Enable syntax hightlighting
 set background=dark
@@ -97,3 +97,6 @@ set noshowmode                        " hide default text mode text (e.g. -- INS
 
 " Delimitmate settings
 let delimitMate_expand_cr = 1         " add an extra line after expanding my opening quote
+
+" TagBar settings
+:nmap <C-t>  :TagbarToggle<CR>

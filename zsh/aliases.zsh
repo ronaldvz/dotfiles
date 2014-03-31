@@ -10,6 +10,7 @@ alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gp='git push'
+alias gl='git log -n5'
 
 #import dirs
 alias dev='cd ~/development'

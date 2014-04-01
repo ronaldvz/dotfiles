@@ -1,0 +1,4 @@
+# ronaldvz's Ack configuration
+
+# Ignore target dirs by default 
+--ignore-dir=target

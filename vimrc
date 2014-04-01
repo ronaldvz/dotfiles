@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
 Bundle 'junegunn/goyo.vim'
 Bundle 'amix/vim-zenroom2'
+Bundle 'mileszs/ack.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'

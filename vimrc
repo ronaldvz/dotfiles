@@ -88,7 +88,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 map <Leader>b :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = {
  \ 'file': '\v[\/]\.(git|hg|svn)$',
- \ 'dir': 'doc|target',
+ \ 'dir': 'target',
  \ }
 " disable caching
 let g:ctrlp_use_caching=0

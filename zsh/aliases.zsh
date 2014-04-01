@@ -24,3 +24,7 @@ alias j7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; echo 'JAVA_HOME has 
 alias zc='vim ~/.zshrc ~/.zsh/*'
 
 alias dot='cd ~/.dotfiles; ls'
+
+alias ta='tmux attach -t'
+alias td='tmux detach'
+alias tl='tmux list-sessions'

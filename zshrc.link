@@ -9,7 +9,7 @@ ZSH="$HOME/.dotfiles/zsh"
 C=$(tput colors)
 
 # setting default path, with ~/bin dir up front
-PATH="/Users/ronald/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/sbin:/usr/local/bin"
+PATH="/Users/ronald/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/sbin:/usr/local/bin:$PATH"
 
 export EDITOR=vim
 export BROWSER=google-chrome
@@ -54,3 +54,5 @@ if [[ -a $HOME/.zshrc.local ]];
 then
  source $HOME/.zshrc.local
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -41,6 +41,8 @@ esac
 ## load aliases
 source $ZSH/aliases.zsh
 
+source $ZSH/functions.zsh
+
 source $ZSH/prompt.zsh
 
 source $ZSH/completion.zsh

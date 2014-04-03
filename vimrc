@@ -110,6 +110,9 @@ let delimitMate_expand_cr = 1         " add an extra line after expanding my ope
 " TagBar settings
 :nmap <C-t>  :TagbarToggle<CR>
 
+" Ack settings
+nnoremap <leader>a :Ack<space>
+
 " Goyo (zenroom) settings
 "" Map Goyo toggle to <Leader> + spacebar
 :nmap <C-z> :Goyo<CR>  

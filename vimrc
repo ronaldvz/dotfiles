@@ -21,6 +21,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'junegunn/goyo.vim'
 Bundle 'amix/vim-zenroom2'
 Bundle 'mileszs/ack.vim'
+Bundle 'jeetsukumaran/vim-buffergator'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
@@ -36,6 +37,8 @@ let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
+
+set clipboard=unnamed
 
 set visualbell                        " Prevent 'sound': no beeping.
 set tabstop=2

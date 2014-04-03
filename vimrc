@@ -21,7 +21,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'junegunn/goyo.vim'
 Bundle 'amix/vim-zenroom2'
 Bundle 'mileszs/ack.vim'
-Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'sandeepcr529/Buffet.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
@@ -112,6 +112,9 @@ let delimitMate_expand_cr = 1         " add an extra line after expanding my ope
 
 " Ack settings
 nnoremap <leader>a :Ack<space>
+
+" Buffets bindings
+:nmap <S-b> :Bufferlist<CR>
 
 " Goyo (zenroom) settings
 "" Map Goyo toggle to <Leader> + spacebar

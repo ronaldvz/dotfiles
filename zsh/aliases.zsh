@@ -13,8 +13,8 @@ alias gp='git push'
 alias gl='git log -n5'
 
 #import dirs
-alias dev='cd ~/development'
-alias pr='cd ~/Projects'
+alias dev='cd ~/development; ls'
+alias pr='cd ~/Projects; ls'
 
 alias cl='clear'
 
@@ -28,3 +28,5 @@ alias dot='cd ~/.dotfiles; ls'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
+
+alias doc='cd ~/Documents; ls'

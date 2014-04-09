@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'airblade/vim-rooter'
 Bundle 'Lokaltog/powerline'
@@ -129,3 +130,7 @@ let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_synchronize_view=1
 map <C-n> :NERDTreeToggle<CR> 
 map <C-f> :NERDTreeFind<CR>
+
+if has ("autocmd") 
+  autocmd BufNewFile,BufRead *.markdown,*.mdown,*.md set filetype=markdown
+endif

@@ -30,3 +30,5 @@ alias td='tmux detach'
 alias tl='tmux list-sessions'
 
 alias doc='cd ~/Documents; ls'
+
+alias rake='noglob rake'

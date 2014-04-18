@@ -23,6 +23,7 @@ Bundle 'junegunn/goyo.vim'
 Bundle 'amix/vim-zenroom2'
 Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
+Bundle 'jamessan/vim-gnupg'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'

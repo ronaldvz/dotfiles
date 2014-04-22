@@ -29,11 +29,10 @@ folder-hook $folder 'source ~/.mutt/personal'
 # How often to check mail (in seconds)
 set mail_check = 300
 
-# ---- Styling ----
+# Sidebar settings
 set sidebar_visible = yes
 set sidebar_width = 34
 set sidebar_delim =' |'
-source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 
 # Status Bar 
 set status_chars  = " *%A"
@@ -115,6 +114,8 @@ set forward_quote                    # include message in forwards
 # in compose screen, bind p to postpone a message
 bind compose p postpone-message
 
-#in index screen, bind p to re-call postponed messages
+# in index screen, bind p to re-call postponed messages
 bind index p recall-message
 
+# colors
+source ~/.mutt/mutt-colors-solarized-dark-256.muttrc

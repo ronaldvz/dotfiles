@@ -19,3 +19,5 @@ unset imap_passive
 
 # Keep IMAP connection alive by polling
 set imap_keepalive = 300
+
+set signature = ~/.mutt/sigs/personal

@@ -1,0 +1,8 @@
+# Taskwarrior configuration file.
+
+# Where to store tasks
+data.location=~/.task
+
+# Set colors and theme
+color=on
+include /usr/local/Cellar/task/2.3.0/share/doc/task/rc/solarized-dark-256.theme

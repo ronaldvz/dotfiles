@@ -28,6 +28,7 @@ Bundle 'jamessan/vim-gnupg'
 " Colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'cschlueter/vim-mustang'
+Bundle 'sjl/badwolf'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -38,7 +39,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme badwolf
 
 set clipboard=unnamed
 

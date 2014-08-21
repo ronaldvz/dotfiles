@@ -24,7 +24,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec i3-sensible-terminal
+#bindsym $mod+t exec i3-sensible-terminal
+bindsym $mod+t exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -144,3 +145,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Hide edge borders
+hide_edge_borders both
+
+# Set wallpaper
+exec --no-startup-id feh --bg-scale /home/ronald/Wallpapers/wallpaper1247920.jpg

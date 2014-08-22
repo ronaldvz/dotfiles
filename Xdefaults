@@ -1,0 +1,16 @@
+URxvt*transparent: true
+URxvt*shading: 50
+URxvt*pointerColor: black
+!URxvt*pointerColor2: white 
+URxvt*borderless: true
+URxvt*colorMode: on
+URxvt*cursorBlink: true
+URxvt*internalBorder: 2
+URxvt*cursorColor: #F2C2CA
+URxvt*scrollBar: false
+!URxvt*font: xft:Terminus:pixelsize=12
+
+!URxvt*background: #000
+URxvt.depth: 32
+URxvt.background: [95]#000000
+URxvt*foreground: #fff

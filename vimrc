@@ -24,6 +24,7 @@ Bundle 'amix/vim-zenroom2'
 Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'jamessan/vim-gnupg'
+Bundle 'ervandew/supertab'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
@@ -44,10 +45,10 @@ colorscheme badwolf
 set clipboard=unnamed
 
 set visualbell                        " Prevent 'sound': no beeping.
-set tabstop=2
+set tabstop=4
 set expandtab                         " Use spaces, not tabs
-set shiftwidth=2
-set softtabstop=2                     " Using 2 spaces when hitting 'tab' in INSERT mode
+set shiftwidth=4
+set softtabstop=4                     " Using 2 spaces when hitting 'tab' in INSERT mode
 set hlsearch                          " Hightlight searchhits
 set incsearch                         " Searchs are incremental
 set smartcase                         " ...unless they contain at least one capital letter
@@ -136,3 +137,6 @@ map <C-f> :NERDTreeFind<CR>
 if has ("autocmd") 
   autocmd BufNewFile,BufRead *.markdown,*.mdown,*.md set filetype=markdown
 endif
+
+" Key for toggling search highlighting.
+:noremap <F3> :set hlsearch! hlsearch?<CR>

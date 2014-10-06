@@ -25,11 +25,13 @@ Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'ervandew/supertab'
+Bundle 'msanders/snipmate.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'cschlueter/vim-mustang'
 Bundle 'sjl/badwolf'
+Bundle 'whatyouhide/vim-gotham'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -40,7 +42,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme badwolf
+colorscheme gotham
 
 set clipboard=unnamed
 
@@ -140,3 +142,5 @@ endif
 
 " Key for toggling search highlighting.
 :noremap <F3> :set hlsearch! hlsearch?<CR>
+
+set tags=~/.tags

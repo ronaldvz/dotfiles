@@ -60,6 +60,8 @@ set autoindent                        " Automatically indent
 set smartindent                       " Do smart indenting
 
 set backspace=indent,eol,start        " backspace through everything in insert mode
+set linespace=6
+
 set autoread                          " Autoread changed files
 
 set foldenable
@@ -120,11 +122,6 @@ nnoremap <leader>a :Ack<space>
 
 " Buffets bindings
 :nmap <S-b> :Bufferlist<CR>
-
-" Goyo (zenroom) settings
-"" Map Goyo toggle to <Leader> + spacebar
-:nmap <C-z> :Goyo<CR>  
-let g:goyo_width = '110'
 
 " NERDTree
 let NERDTreeWinSize=50              " NERDTree window size

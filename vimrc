@@ -45,10 +45,10 @@ colorscheme gotham
 set clipboard=unnamed
 
 set visualbell                        " Prevent 'sound': no beeping.
-set tabstop=4
+set tabstop=2
 set expandtab                         " Use spaces, not tabs
-set shiftwidth=4
-set softtabstop=4                     " Using 2 spaces when hitting 'tab' in INSERT mode
+set shiftwidth=2
+set softtabstop=2                     " Using 2 spaces when hitting 'tab' in INSERT mode
 set hlsearch                          " Hightlight searchhits
 set incsearch                         " Searchs are incremental
 set smartcase                         " ...unless they contain at least one capital letter
@@ -59,6 +59,7 @@ set ignorecase                        " Searches are case insensitive...
 set autoindent                        " Automatically indent
 set smartindent                       " Do smart indenting
 
+set backspace=indent,eol,start        " backspace through everything in insert mode
 set autoread                          " Autoread changed files
 
 set foldenable

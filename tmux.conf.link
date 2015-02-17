@@ -48,6 +48,7 @@ set-option -g status-right "Session: #S | #(date) |#[fg=colour136]#(uptime |sed 
 set-option -g status-right-length 80
 
 set-option -g automatic-rename off
+set-option -g allow-rename off
 
 set-window-option -g window-status-current-bg blue
 

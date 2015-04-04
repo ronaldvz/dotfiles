@@ -1,10 +1,9 @@
 set nocompatible
 filetype off                          " required for Vundle to work
                                 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-filetype plugin indent on             " required for Vundle to work
 
 " Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
@@ -33,6 +32,9 @@ Bundle 'whatyouhide/vim-gotham'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
+
+call vundle#end()
+filetype plugin indent on             " required for Vundle to work
 
 syntax on                             " Enable syntax hightlighting
 set background=dark

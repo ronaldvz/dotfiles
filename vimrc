@@ -21,7 +21,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'jamessan/vim-gnupg'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'msanders/snipmate.vim'
 
 " Colors
@@ -29,6 +29,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'cschlueter/vim-mustang'
 Bundle 'sjl/badwolf'
 Bundle 'whatyouhide/vim-gotham'
+Bundle 'morhetz/gruvbox'
+Bundle 'zeis/vim-kolor'
+Bundle 'tomasr/molokai'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
@@ -42,7 +45,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme gotham
+colorscheme molokai
 
 set clipboard=unnamed
 

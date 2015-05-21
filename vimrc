@@ -44,6 +44,8 @@ colorscheme gotham
 
 set clipboard=unnamed
 
+set cpoptions+=$                      " Add $ sign to visualize what i'm changing
+
 set visualbell                        " Prevent 'sound': no beeping.
 set tabstop=2
 set expandtab                         " Use spaces, not tabs

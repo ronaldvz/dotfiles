@@ -1,10 +1,9 @@
 set nocompatible
 filetype off                          " required for Vundle to work
                                 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-filetype plugin indent on             " required for Vundle to work
 
 " Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
@@ -22,7 +21,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
 Bundle 'jamessan/vim-gnupg'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'msanders/snipmate.vim'
 
 " Colors
@@ -30,9 +29,15 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'cschlueter/vim-mustang'
 Bundle 'sjl/badwolf'
 Bundle 'whatyouhide/vim-gotham'
+Bundle 'morhetz/gruvbox'
+Bundle 'zeis/vim-kolor'
+Bundle 'tomasr/molokai'
 
 " Bundles on vim.org to be managed by Vundle
 " -- None at the moment
+
+call vundle#end()
+filetype plugin indent on             " required for Vundle to work
 
 syntax on                             " Enable syntax hightlighting
 set background=dark
@@ -40,7 +45,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme gotham
+colorscheme molokai
 
 set clipboard=unnamed
 

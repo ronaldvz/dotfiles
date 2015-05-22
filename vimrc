@@ -71,26 +71,27 @@ set clipboard=unnamed
 " Wyatt's video on Vimeo. Awesome feature!
 set cpoptions+=$                      
 
-" Prevent 'sound': no beeping.
-set visualbell                        
+" Prevent 'sound': no beeping (virtualbell)
+set vb 
 
+" Nr of spaces when hitting 'tab'
 set tabstop=2
+set shiftwidth=2
+" Nr of spaces used when hitting 'tab' in INSERT mode
+set softtabstop=2
 
 " Use spaces, not tabs
 set expandtab                         
-
-set shiftwidth=2
-
-" Using 2 spaces when hitting 'tab' in INSERT mode
-set softtabstop=2                     
 
 " Hightlight searchhits
 set hlsearch                          
 
 " Searchs are incremental
 set incsearch                         
+
 " Searches are case insensitive...
 set ignorecase                        
+
 " ...unless they contain at least one capital letter
 set smartcase                         
 
@@ -181,6 +182,8 @@ nmap ,gs :Gstatus<CR>
 nmap ,ge :Gedit<CR>
 nmap ,gw :Gwrite<CR>
 nmap ,gr :Gread<CR>
+nmap ,gd :Gdiff<CR>
+nmap ,gc :Gcommit<CR>
 
 " Delimitmate setting: add an extra line after expanding my opening quote
 let delimitMate_expand_cr = 1         
@@ -213,5 +216,3 @@ if has ("autocmd")
 endif
 
 set tags=~/.tags
-
-

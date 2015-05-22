@@ -85,7 +85,7 @@ set softtabstop=2
 " Use spaces, not tabs
 set expandtab                         
 
-" Hightlight searchhits
+" Highlight searchhits
 set hlsearch                          
 
 " Searchs are incremental

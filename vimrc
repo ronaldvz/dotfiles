@@ -112,10 +112,6 @@ set linespace=6
 set autoread                          
 
 " Keybindings for easy buffer and tab-navigation
-nmap <silent> ,. :bnext<CR> " Next buffer
-nmap <silent> ,m :bprev<CR> " Previous buffer
-nmap <silent> ;' :tabnext<CR> " Next tab
-nmap <silent> ;l :tabprev<CR> " Previous tab
 
 " Setting backup dirs and disabling swapping
 set backupdir=~/.vim/backup//         " where to put backup files.
@@ -137,17 +133,38 @@ set noswapfile                        " disable swap files
 :nmap <silent> ,ev :e $MYVIMRC<CR>
 :nmap <silent> ,sv :so $MYVIMRC<CR>
 
+" Delete current buffer
+nmap <silent> ,bd :bd<CR>
+
+" Open next buffer
+nmap <silent> ,. :bnext<CR>
+
+" Open previous buffer
+nmap <silent> ,m :bprev<CR>
+
+" Go to next tab
+nmap <silent> ;' :tabnext<CR> 
+
+" Go to previous tab
+nmap <silent> ;l :tabprev<CR> 
+
+" Key for toggling search highlighting.
+:noremap ,s :set hlsearch! hlsearch?<CR>
+
 " ###
-" Plugin bindings
+" Plugin specific bindings
 " ###
 
 " CTRL-P
 map <Leader>b :CtrlPBuffer<cr>
+
+" Let CTRL-P ignore git / svn files and target dirs
 let g:ctrlp_custom_ignore = {
  \ 'file': '\v[\/]\.(git|hg|svn)$',
  \ 'dir': 'target\|_site\|doc\',
  \ }
-" disable caching
+
+" disable CTRL-P caching
 let g:ctrlp_use_caching=0
 
 " Powerline settings
@@ -170,20 +187,21 @@ let delimitMate_expand_cr = 1
 :nmap <S-b> :Bufferlist<CR>
 
 " NERDTree
-let NERDTreeWinSize=50              " NERDTree window size
+let NERDTreeWinSize=50
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_synchronize_view=1
+
+" Open NERDTree
 map <C-n> :NERDTreeToggle<CR> 
+
+" Find the currently open file in NERDTree
 map <C-f> :NERDTreeFind<CR>
 
 " Set filetype to markdown on markdown files
 if has ("autocmd") 
   autocmd BufNewFile,BufRead *.markdown,*.mdown,*.md set filetype=markdown
 endif
-
-" Key for toggling search highlighting.
-:noremap ,s :set hlsearch! hlsearch?<CR>
 
 set tags=~/.tags

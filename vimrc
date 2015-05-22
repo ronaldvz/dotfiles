@@ -154,7 +154,7 @@ nmap <silent> ;' :tabnext<CR>
 nmap <silent> ;l :tabprev<CR> 
 
 " Key for toggling search highlighting.
-:noremap ,s :set hlsearch! hlsearch?<CR>
+:noremap ,h :set hlsearch! hlsearch?<CR>
 
 " ###
 " Plugin specific bindings
@@ -196,7 +196,7 @@ let delimitMate_expand_cr = 1
 :nmap <C-t>  :TagbarToggle<CR>
 
 " Ack settings
-:nmap <Leader-s> :Ack<space>
+:nmap ,f :Ack<space>
 
 " Buffets bindings
 :nmap <S-b> :Bufferlist<CR>

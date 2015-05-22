@@ -12,14 +12,15 @@ Bundle 'kien/ctrlp.vim'
 
 " Provides git features in vim
 Bundle 'tpope/vim-fugitive'
-
-Bundle 'tpope/vim-surround'
+" Bundle 'tpope/vim-surround' (disabled as delimitMate works fine)
 
 " Provides markdown support
 Bundle 'tpope/vim-markdown'
 
-" provides git status in gutter
+" Provides git status in gutter
 Bundle 'airblade/vim-gitgutter'
+
+" Changes to working directory to the directory of the opened file
 Bundle 'airblade/vim-rooter'
 
 " Provides nice looking bottom bar
@@ -34,6 +35,7 @@ Bundle 'scrooloose/nerdtree'
 " Provides syntax highlighting
 "Bundle 'scrooloose/syntastic'
 
+" Provides delimiters for brackets/parentheses and such
 Bundle 'Raimondi/delimitMate'
 
 " Provides filesearch within current directory (ack needs to be installed)
@@ -174,8 +176,10 @@ let g:ctrlp_use_caching=0
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
-set laststatus=2                      " always display powerline in all windows
-set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
+" always display powerline in all windows
+set laststatus=2
+" hide default text mode text (e.g. -- INSERT -- below the statusline
+set noshowmode
 
 " vim-fugitive
 nmap ,gs :Gstatus<CR>
@@ -216,3 +220,7 @@ if has ("autocmd")
 endif
 
 set tags=~/.tags
+
+" abbrevations: replaces mistypes in insert mode
+iab Seperate Separate
+iab seperate separate

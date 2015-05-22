@@ -67,7 +67,8 @@ colorscheme molokai
 
 set clipboard=unnamed
 
-" Add $ sign to visualize what i'm changing (when using 'c')
+" Add $ sign to visualize what i'm changing (when using 'c'). Thanks to Derek
+" Wyatt's video on Vimeo. Awesome feature!
 set cpoptions+=$                      
 
 " Prevent 'sound': no beeping.
@@ -88,15 +89,14 @@ set hlsearch
 
 " Searchs are incremental
 set incsearch                         
-
+" Searches are case insensitive...
+set ignorecase                        
 " ...unless they contain at least one capital letter
 set smartcase                         
 
 " Enables line numbers
 set number                            
 
-" Searches are case insensitive...
-set ignorecase                        
 
 " Automatically indent
 set autoindent                        
@@ -119,7 +119,9 @@ set directory=~/.vim/tmp//            " where to put swap files.
 set nobackup                          " disable backups
 set noswapfile                        " disable swap files
 
-" Keybindings
+" --------------------------------- 
+" ---------- Keybindings ----------
+" --------------------------------- 
 " Ctrl-N to enable / disable line numbers
 :nnoremap <C-N><C-N> :set invnumber<CR>
 
@@ -174,6 +176,12 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2                      " always display powerline in all windows
 set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
 
+" vim-fugitive
+nmap ,gs :Gstatus<CR>
+nmap ,ge :Gedit<CR>
+nmap ,gw :Gwrite<CR>
+nmap ,gr :Gread<CR>
+
 " Delimitmate setting: add an extra line after expanding my opening quote
 let delimitMate_expand_cr = 1         
 
@@ -205,3 +213,5 @@ if has ("autocmd")
 endif
 
 set tags=~/.tags
+
+

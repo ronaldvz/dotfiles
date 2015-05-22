@@ -1,30 +1,51 @@
 set nocompatible
-filetype off                          " required for Vundle to work
+" required for Vundle to work
+filetype off                          
                                 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
-
-" Bundles on github to be managed by Vundle
 Bundle 'gmarik/vundle'
+
+" Provides 'open resource' functionality
 Bundle 'kien/ctrlp.vim'
+
+" Provides git features in vim
 Bundle 'tpope/vim-fugitive'
+
 Bundle 'tpope/vim-surround'
+
+" Provides markdown support
 Bundle 'tpope/vim-markdown'
+
+" provides git status in gutter
 Bundle 'airblade/vim-gitgutter'
 Bundle 'airblade/vim-rooter'
+
+" Provides nice looking bottom bar
 Bundle 'Lokaltog/powerline'
+
+" Provides tagbar on rightside
 Bundle 'majutsushi/tagbar'
+
+" Provides filebrowser on leftside
 Bundle 'scrooloose/nerdtree'
+
+" Provides syntax highlighting
 "Bundle 'scrooloose/syntastic'
+
 Bundle 'Raimondi/delimitMate'
+
+" Provides filesearch within current directory (ack needs to be installed)
 Bundle 'mileszs/ack.vim'
+
+" Provides nice overview of open buffers 
 Bundle 'sandeepcr529/Buffet.vim'
-Bundle 'jamessan/vim-gnupg'
-" Bundle 'ervandew/supertab'
+
+" Provides code-snippets
 Bundle 'msanders/snipmate.vim'
 
-" Colors
+" Color schemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'cschlueter/vim-mustang'
 Bundle 'sjl/badwolf'
@@ -33,15 +54,12 @@ Bundle 'morhetz/gruvbox'
 Bundle 'zeis/vim-kolor'
 Bundle 'tomasr/molokai'
 
-" Bundles on vim.org to be managed by Vundle
-" -- None at the moment
-
 call vundle#end()
 filetype plugin indent on             " required for Vundle to work
 
-syntax on                             " Enable syntax hightlighting
+" Enable syntax highlighting
+syntax on
 set background=dark
-" Basic settings
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
@@ -49,29 +67,49 @@ colorscheme molokai
 
 set clipboard=unnamed
 
-set cpoptions+=$                      " Add $ sign to visualize what i'm changing
+" Add $ sign to visualize what i'm changing (when using 'c')
+set cpoptions+=$                      
 
-set visualbell                        " Prevent 'sound': no beeping.
+" Prevent 'sound': no beeping.
+set visualbell                        
+
 set tabstop=2
-set expandtab                         " Use spaces, not tabs
+
+" Use spaces, not tabs
+set expandtab                         
+
 set shiftwidth=2
-set softtabstop=2                     " Using 2 spaces when hitting 'tab' in INSERT mode
-set hlsearch                          " Hightlight searchhits
-set incsearch                         " Searchs are incremental
-set smartcase                         " ...unless they contain at least one capital letter
 
-set number                            " Enables line numbers
+" Using 2 spaces when hitting 'tab' in INSERT mode
+set softtabstop=2                     
 
-set ignorecase                        " Searches are case insensitive...
-set autoindent                        " Automatically indent
-set smartindent                       " Do smart indenting
+" Hightlight searchhits
+set hlsearch                          
 
-set backspace=indent,eol,start        " backspace through everything in insert mode
+" Searchs are incremental
+set incsearch                         
+
+" ...unless they contain at least one capital letter
+set smartcase                         
+
+" Enables line numbers
+set number                            
+
+" Searches are case insensitive...
+set ignorecase                        
+
+" Automatically indent
+set autoindent                        
+
+" Do smart indenting
+set smartindent
+
+" backspace through everything in insert mode
+set backspace=indent,eol,start        
 set linespace=6
 
-set autoread                          " Autoread changed files
-
-set foldenable
+" Autoread changed files
+set autoread                          
 
 " Keybindings for easy buffer and tab-navigation
 nmap <silent> ,. :bnext<CR> " Next buffer
@@ -86,17 +124,18 @@ set nobackup                          " disable backups
 set noswapfile                        " disable swap files
 
 " Keybindings
-" Ctrl-N for enabling / disabling line numbers
+" Ctrl-N to enable / disable line numbers
 :nnoremap <C-N><C-N> :set invnumber<CR>
 
-" Ctrl-W for enabling / disablig line wrapping
+" Ctrl-W to enable / disable line wrapping
 ":nnoremap <C-w><C-w> :set invwrap<CR>
 
 " Ctrl-P twice for enabling pasting, without vim doing reformatting and stuff
 :nnoremap <C-p><C-p> :set invpaste<CR>
 
-" Add basic Json syntax highlighting (without using plugins)
-autocmd BufNewFile,BufRead *.json set ft=javascript
+" Edit vimrc file
+:nmap <silent> ,ev :e $MYVIMRC<CR>
+:nmap <silent> ,sv :so $MYVIMRC<CR>
 
 " ###
 " Plugin bindings
@@ -118,14 +157,14 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2                      " always display powerline in all windows
 set noshowmode                        " hide default text mode text (e.g. -- INSERT -- below the statusline
 
-" Delimitmate settings
-let delimitMate_expand_cr = 1         " add an extra line after expanding my opening quote
+" Delimitmate setting: add an extra line after expanding my opening quote
+let delimitMate_expand_cr = 1         
 
 " TagBar settings
 :nmap <C-t>  :TagbarToggle<CR>
 
 " Ack settings
-nnoremap <leader>a :Ack<space>
+:nmap <Leader-s> :Ack<space>
 
 " Buffets bindings
 :nmap <S-b> :Bufferlist<CR>
@@ -139,11 +178,12 @@ let g:nerdtree_tabs_synchronize_view=1
 map <C-n> :NERDTreeToggle<CR> 
 map <C-f> :NERDTreeFind<CR>
 
+" Set filetype to markdown on markdown files
 if has ("autocmd") 
   autocmd BufNewFile,BufRead *.markdown,*.mdown,*.md set filetype=markdown
 endif
 
 " Key for toggling search highlighting.
-:noremap <F3> :set hlsearch! hlsearch?<CR>
+:noremap ,s :set hlsearch! hlsearch?<CR>
 
 set tags=~/.tags

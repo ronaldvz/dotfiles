@@ -1,10 +1,10 @@
 set nocompatible
-" required for Vundle to work
-filetype off                          
+filetype on
                                 
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
+" Vundle manages the plugins 
 Bundle 'gmarik/vundle'
 
 " Provides 'open resource' functionality
@@ -114,13 +114,14 @@ set linespace=6
 " Autoread changed files
 set autoread                          
 
-" Keybindings for easy buffer and tab-navigation
-
 " Setting backup dirs and disabling swapping
 set backupdir=~/.vim/backup//         " where to put backup files.
 set directory=~/.vim/tmp//            " where to put swap files.
 set nobackup                          " disable backups
 set noswapfile                        " disable swap files
+
+" Hide the mouse pointer while typing(!)
+set mousehide
 
 " --------------------------------- 
 " ---------- Keybindings ----------
@@ -183,7 +184,6 @@ set noshowmode
 
 " vim-fugitive
 nmap ,gs :Gstatus<CR>
-nmap ,ge :Gedit<CR>
 nmap ,gw :Gwrite<CR>
 nmap ,gr :Gread<CR>
 nmap ,gd :Gdiff<CR>

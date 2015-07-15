@@ -1,7 +1,7 @@
 set nocompatible
 filetype on
                                 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle manages the plugins 
@@ -65,7 +65,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme molokai
+colorscheme gruvbox
 
 set clipboard=unnamed
 

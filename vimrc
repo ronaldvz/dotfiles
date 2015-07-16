@@ -10,6 +10,9 @@ Bundle 'gmarik/vundle'
 " Provides 'open resource' functionality
 Bundle 'kien/ctrlp.vim'
 
+" Provides easy commenting
+Bundle 'scrooloose/nerdcommenter'
+
 " Provides git features in vim
 Bundle 'tpope/vim-fugitive'
 " Bundle 'tpope/vim-surround' (disabled as delimitMate works fine)
@@ -45,7 +48,16 @@ Bundle 'mileszs/ack.vim'
 Bundle 'sandeepcr529/Buffet.vim'
 
 " Provides code-snippets
-Bundle 'msanders/snipmate.vim'
+" Bundle 'msanders/snipmate.vim'
+
+" Provides css coloring, awesome
+Bundle 'ap/vim-css-color'
+
+" Also provides code-snippets
+Bundle 'drmingdrmer/xptemplate'
+
+" Taskwarrior
+Bundle "farseer90718/vim-taskwarrior"
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
@@ -99,7 +111,6 @@ set smartcase
 
 " Enables line numbers
 set number                            
-
 
 " Automatically indent
 set autoindent                        
@@ -169,6 +180,9 @@ let g:ctrlp_custom_ignore = {
  \ 'file': '\v[\/]\.(git|hg|svn)$',
  \ 'dir': 'target\|_site\|doc\',
  \ }
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " disable CTRL-P caching
 let g:ctrlp_use_caching=0

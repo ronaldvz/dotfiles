@@ -55,6 +55,7 @@ Bundle 'whatyouhide/vim-gotham'
 Bundle 'morhetz/gruvbox'
 Bundle 'zeis/vim-kolor'
 Bundle 'tomasr/molokai'
+Bundle 'jpo/vim-railscasts-theme'
 
 call vundle#end()
 filetype plugin indent on             " required for Vundle to work
@@ -65,7 +66,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme gruvbox
+colorscheme railscasts
 
 set clipboard=unnamed
 

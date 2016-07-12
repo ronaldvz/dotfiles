@@ -11,16 +11,16 @@
 set $mod Mod4
 
 #Constants 
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
+set $workspace1 "1:  "
+set $workspace2 "2: "
+set $workspace3 "3: "
+set $workspace4 "4: "
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10"
+set $workspace10 "10: "
 
 set $base00 #101218
 set $base01 #1f222d
@@ -206,7 +206,7 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 
 # Bar
   bar {
-    font pango: System San Francisco Display 11
+    font pango: System San Francisco Display 11, FontAwesome 11
     status_command i3blocks
     position bottom
     bindsym button4 nop
@@ -225,4 +225,6 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 
 #Applications to specific workspace
 assign [class = "Firefox"] $workspace1
-assign [class = "Spotify"] $workspace3
+assign [class = "google-chrome"] $workspace1
+assign [class = "Steam"] $workspace4
+assign [class = "^spotify$"] $workspace10

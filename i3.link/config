@@ -187,6 +187,9 @@ new_window pixel
 # Set wallpaper
 exec --no-startup-id feh --bg-scale /home/ronald/grass.jpg
 
+# Reverse scrolling to natural
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115
+
 # Start nm-applet
 exec --no-startup-id nm-applet
 

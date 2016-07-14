@@ -38,16 +38,19 @@ $percent = $2;
 
 if ($status eq 'Discharging') {
 	$full_text .= ' ';
+  $full_text .= "$percent%";
+
+  if ($acpi =~ /(\d\d:\d\d):/) {
+    $full_text .= " ($1)";
+  }
+
 } elsif ($status eq 'Charging') {
 	$full_text .= '  ';
+  $full_text .= "$percent%";
 }
 
-$full_text .= "$percent%";
 $short_text = $full_text;
 
-if ($acpi =~ /(\d\d:\d\d):/) {
-	$full_text .= " ($1)";
-}
 
 # print text
 print "$full_text\n";

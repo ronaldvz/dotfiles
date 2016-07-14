@@ -31,6 +31,14 @@ color=#C9CCDB
 
 [separator]
 
+[network]
+command=/home/ronald/.scripts/network.sh
+interval=1
+label=
+color=#C9CCDB
+
+[separator]
+
 [battery]
 command=/home/ronald/.scripts/battery.sh
 interval=1

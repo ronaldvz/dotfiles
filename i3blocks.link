@@ -16,7 +16,7 @@ separator_block_width=8
 [separator]
 
 [disk]
-command=/home/ronald/.scripts/disk.sh | sed '1,2s/$/ Remaining/'
+command=/home/ronald/.scripts/disk.sh | sed '1,2s/$/b Free/'
 interval=1
 label=
 color=#C9CCDB

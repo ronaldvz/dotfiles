@@ -15,7 +15,7 @@ set $workspace1 "1:  "
 set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
-set $workspace5 "5"
+set $workspace5 "5: "
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -23,7 +23,8 @@ set $workspace9 "9"
 set $workspace10 "10: "
 
 set $base00 #101218
-set $base01 #1f222d
+#set $base01 #1f222d
+set $base01 #121212
 set $base02 #252936
 set $base03 #7780a1
 set $base04 #C0C5CE
@@ -38,6 +39,7 @@ set $base0C #97e0ff
 set $base0D #97bbf7
 set $base0E #c0b7f9
 set $base0F #fcc09e
+set $newcolor #20e81b
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -185,31 +187,25 @@ hide_edge_borders both
 # Set borders of new windows to 1 pixel
 new_window pixel
 
-# Set wallpaper
-exec --no-startup-id feh --bg-scale /home/ronald/Pictures/1920x1080.jpg
-
-# Reverse scrolling to natural
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115
-
-# Start nm-applet
-exec --no-startup-id nm-applet
-
-# Start caffeine indicator
-exec --no-startup-id caffeine-indicator
-
 # Increase brightness (requires xbacklight (apt))
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 # Decrease brightness
-bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 1 -dec 5
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 1 -dec 10
 
 # Set bindings for audio keys
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+5%'
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+# Lock computer 
+bindsym $mod+Shift+Delete exec ~/.scripts/lock.sh
+
+# Go to urgent window
+bindsym $mod+x [urgent=latest] focus
+
 #Window colors
 #                         border  background text    indicator
-client.focused          	$base01 $base01    $base07 $base0F
+client.focused          	$base0B $base01    $base07 $base0F
 client.focused_inactive 	$base02 $base02    $base03 $base0F
 client.unfocused        	$base02 $base02    $base03 $base0F
 client.urgent 						$base02 $base08 	 $base00 $base0F
@@ -217,18 +213,18 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 # Bar
   bar {
     #font pango: System San Francisco Display 11, FontAwesome 13
-    font pango: Monospace 12, FontAwesome 13
+    font pango: Monospace 8, FontAwesome 11 
     status_command i3blocks
-    position bottom
+    position bottom 
     bindsym button4 nop
     bindsym button5 nop
     colors {
-      separator $base03
+      separator $newcolor #$base03
       background $base01
       statusline $base05
 #                        border  background text
-      focused_workspace  $base01 $base01    $base07
-      active_workspace   $base01 $base02    $base03
+      focused_workspace  $base01 $base01    $newcolor #$base07
+      active_workspace   $base01 $base02    36a734 #$base03
       inactive_workspace $base01 $base01    $base03
       urgent_workspace   $base01 $base01    $base08
     }
@@ -239,6 +235,27 @@ assign [class = "Firefox"] $workspace1
 assign [class = "google-chrome"] $workspace1
 assign [class = "Steam"] $workspace4
 assign [class = "^spotify$"] $workspace10
+assign [class = "Thunar"] $workspace5
 
 #TODO bind button to 'arandr' for easy multimonitor setup
+
+# ** Autostart applications ** #
+
+# Kill notification manager that starts with Ubuntu Unity
+exec killall -q notify-osd
+
+# Start dunst as notification daemon
+exec --no-startup-id dunst
+
+# Set wallpaper
+exec --no-startup-id feh --bg-scale /home/ronald/Pictures/wall.jpg
+
+# Reverse scrolling to natural
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115
+
+# Start nm-applet
+exec --no-startup-id nm-applet
+
+# Start caffeine indicator
+exec --no-startup-id caffeine-indicator
 

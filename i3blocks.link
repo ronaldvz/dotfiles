@@ -3,9 +3,14 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 markup=pango
 full_text=
 align=center
-color=#7780a1
+#color=#7780a1
+color=#20e81b
 separator=false
 separator_block_width=8
+
+[weather]
+command="/home/ronald/.scripts/weather.sh"
+interval=1
 
 #[song]
 #command=/home/ronald/.scripts/current_track
@@ -14,30 +19,29 @@ separator_block_width=8
 #color=#2ebd59
 
 [separator]
+full_text=
 
 [disk]
 command=/home/ronald/.scripts/disk.sh | sed '1,2s/$/b Free/'
 interval=1
-label=
 color=#C9CCDB
 
 [separator]
+full_text=
 
 [load]
 command=/home/ronald/.scripts/load_average.sh
 interval=1
-label=
 color=#C9CCDB
 
 [separator]
+full_text=
 
 [network]
 command=/home/ronald/.scripts/network.sh
 interval=1
-label=
+#label=
 color=#C9CCDB
-
-[separator]
 
 [battery]
 command=/home/ronald/.scripts/battery.sh
@@ -45,6 +49,7 @@ interval=1
 color=#C9CCDB
 
 [separator]
+full_text=
 
 #[volume]
 #command=/home/ronald/.scripts/volume.sh
@@ -53,15 +58,7 @@ color=#C9CCDB
 #color=#C9CCDB
 
 [date]
-command=echo "`date +'%d %b'`"
+command=echo "`date +'%d %b %Y - %H:%M'`"
 interval=1
-label=
-color=#C9CCDB
-
-[separator]
-
-[time]
-command=echo "`date +'%H:%M'`"
-interval=1
-label=
+#label=
 color=#C9CCDB

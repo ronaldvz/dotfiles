@@ -10,6 +10,11 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
+#i3-gaps specifics
+gaps inner 11
+gaps outer 10
+smart_gaps on
+
 #Constants 
 set $workspace1 "1:  "
 set $workspace2 "2: "
@@ -52,21 +57,21 @@ set $newcolor #20e81b
 # chose an xft font, such as:
 # font xft:DejaVu Sans Mono 10
 #
-#font pango:System San Fransisco 10
-font pango:Monospace 8
+font pango:Source Code Pro 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+#bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec urxvt -e /usr/bin/zsh
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run (default)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 40 -padding 10 -opacity "65" -bw 4 -bc "#323200" -bg "#000032" -fg "c8ed1d" -hlbg "#000032" -hlfg "#ab56fc" -font "Source Code Pro 13"
 
 # change focus
 bindsym $mod+h focus left
@@ -212,10 +217,10 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 
 # Bar
   bar {
-    #font pango: System San Francisco Display 11, FontAwesome 13
-    font pango: Monospace 8, FontAwesome 11 
+    #font pango: System San Francisco Display 11, FontAwesome 11
+    font pango: Source Code Pro 13, FontAwesome 12
     status_command i3blocks
-    position bottom 
+    position bottom
     bindsym button4 nop
     bindsym button5 nop
     colors {
@@ -241,21 +246,18 @@ assign [class = "Thunar"] $workspace5
 
 # ** Autostart applications ** #
 
-# Kill notification manager that starts with Ubuntu Unity
-exec killall -q notify-osd
-
 # Start dunst as notification daemon
 exec --no-startup-id dunst
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale /home/ronald/Pictures/wall.jpg
+exec --no-startup-id feh --bg-scale /home/ronald/wallpapers/fractal/fractal.jpg
 
 # Reverse scrolling to natural
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115
 
 # Start nm-applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Start caffeine indicator
-exec --no-startup-id caffeine-indicator
+#exec --no-startup-id caffeine-indicator
 

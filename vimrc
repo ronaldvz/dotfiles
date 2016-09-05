@@ -27,7 +27,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'airblade/vim-rooter'
 
 " Provides nice looking bottom bar
-Bundle 'Lokaltog/powerline'
+"" Bundle 'Lokaltog/powerline'
 
 " Provides tagbar on rightside
 Bundle 'majutsushi/tagbar'
@@ -57,7 +57,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'drmingdrmer/xptemplate'
 
 " Taskwarrior
-Bundle "farseer90718/vim-taskwarrior"
+" Bundle "farseer90718/vim-taskwarrior"
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
@@ -78,7 +78,7 @@ set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme railscasts
+colorscheme gotham 
 
 set clipboard=unnamed
 

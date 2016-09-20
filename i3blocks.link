@@ -4,16 +4,13 @@ markup=pango
 full_text=
 align=center
 #color=#7780a1
-color=#20e81b
+#color=#20e81b
+color=#d26937
 separator=false
 separator_block_width=8
 
-[weather]
-command="/home/ronald/.scripts/weather.sh"
-interval=1
-
 #[song]
-#command=/home/ronald/.scripts/current_track
+#command=/home/ronald/.i3/scripts/current_track
 #label=
 #interval=1
 #color=#2ebd59
@@ -22,7 +19,7 @@ interval=1
 full_text=
 
 [disk]
-command=/home/ronald/.scripts/disk.sh | sed '1,2s/$/b Free/'
+command=/home/ronald/.i3/scripts/disk.sh | sed '1,2s/$/b Free/'
 interval=1
 color=#C9CCDB
 
@@ -30,7 +27,7 @@ color=#C9CCDB
 full_text=
 
 [load]
-command=/home/ronald/.scripts/load_average.sh
+command=/home/ronald/.i3/scripts/load_average.sh
 interval=1
 color=#C9CCDB
 
@@ -38,13 +35,13 @@ color=#C9CCDB
 full_text=
 
 [network]
-command=/home/ronald/.scripts/network.sh
+command=/home/ronald/.i3/scripts/network.sh
 interval=1
 #label=
 color=#C9CCDB
 
 [battery]
-command=/home/ronald/.scripts/battery.sh
+command=/home/ronald/.i3/scripts/battery.sh
 interval=1
 color=#C9CCDB
 
@@ -52,7 +49,7 @@ color=#C9CCDB
 full_text=
 
 #[volume]
-#command=/home/ronald/.scripts/volume.sh
+#command=/home/ronald/.i3/scripts/volume.sh
 #interval=1
 #label=
 #color=#C9CCDB

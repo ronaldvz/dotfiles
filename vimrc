@@ -75,10 +75,11 @@ filetype plugin indent on             " required for Vundle to work
 " Enable syntax highlighting
 syntax on
 set background=dark
+set t_Co=256
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme gotham 
+colorscheme railscasts
 
 set clipboard=unnamed
 
@@ -174,7 +175,8 @@ nmap <silent> ;l :tabprev<CR>
 " ###
 
 " CTRL-P
-map <Leader>b :CtrlPBuffer<cr>
+"map <Leader>b :CtrlPBuffer<cr>
+map <Shift><Shift> :CtrlPBuffer<cr>
 
 " Let CTRL-P ignore git / svn files and target dirs
 let g:ctrlp_custom_ignore = {

@@ -4,7 +4,7 @@ filetype on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-#let g:javascript_plugin_jsdoc = 1
+"let g:javascript_plugin_jsdoc = 1
 
 " Vundle manages the plugins 
 Plugin 'gmarik/vundle'

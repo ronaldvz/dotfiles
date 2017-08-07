@@ -10,11 +10,6 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
-#i3-gaps specifics
-gaps inner 11
-gaps outer 10
-smart_gaps on
-
 #Constants 
 set $workspace1 "1:  "
 set $workspace2 "2: "
@@ -58,20 +53,22 @@ set $orange #d26937
 # chose an xft font, such as:
 # font xft:DejaVu Sans Mono 10
 #
-font pango:Source Code Pro 12
+font pango:Source Code Pro 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec termite 
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 #bindsym # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run -lines 5 -padding 2 -font "Source Code Pro 12" -bw "#121212" -eh 1 -color-enabled -line-margin 2 -hide-scrollbar -width 20
+#bindsym $mod+d exec rofi -show run -lines 5 -padding 2 -font "Source Code Pro 12" -bw "#121212" -eh 1 -color-enabled -line-margin 2 -hide-scrollbar -width 20
+#bindsym $mod+space exec rofi -show run -lines 5 -padding 2 -font "Source Code Pro 12" -bw "#121212" -eh 1 -color-enabled -line-margin 2 -hide-scrollbar -width 20
+bindsym $mod+d exec rofi -show run -lines 10
+bindsym $mod+space exec rofi -show run -lines 10
 
 # change focus
 bindsym $mod+h focus left
@@ -115,7 +112,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -218,7 +215,7 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 # Bar
   bar {
     #font pango: System San Francisco Display 11, FontAwesome 11
-    font pango: Source Code Pro 13, FontAwesome 12
+    font pango: Source Code Pro 8, FontAwesome 10
     status_command i3blocks
     position bottom
     bindsym button4 nop
@@ -250,7 +247,7 @@ assign [class = "Thunar"] $workspace5
 exec --no-startup-id dunst
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale /home/ronald/wallpapers/stairs/stairs
+exec --no-startup-id feh --bg-scale /home/ronald/Pictures/Wallpapers/yellow-paper.jpeg
 
 # Reverse scrolling to natural
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115

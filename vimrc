@@ -4,70 +4,83 @@ filetype on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+#let g:javascript_plugin_jsdoc = 1
+
 " Vundle manages the plugins 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Provides 'open resource' functionality
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Provides easy commenting
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " Provides git features in vim
-Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-surround' (disabled as delimitMate works fine)
+Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-surround' (disabled as delimitMate works fine)
 
 " Provides markdown support
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " Provides git status in gutter
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 " Changes to working directory to the directory of the opened file
-Bundle 'airblade/vim-rooter'
+Plugin 'airblade/vim-rooter'
 
 " Provides nice looking bottom bar
-"" Bundle 'Lokaltog/powerline'
+"" Plugin 'Lokaltog/powerline'
 
 " Provides tagbar on rightside
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 " Provides filebrowser on leftside
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Provides syntax highlighting
-"Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Provides delimiters for brackets/parentheses and such
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 " Provides filesearch within current directory (ack needs to be installed)
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 " Provides nice overview of open buffers 
-Bundle 'sandeepcr529/Buffet.vim'
+Plugin 'sandeepcr529/Buffet.vim'
 
 " Provides code-snippets
-" Bundle 'msanders/snipmate.vim'
+" Plugin 'msanders/snipmate.vim'
 
 " Provides css coloring, awesome
-Bundle 'ap/vim-css-color'
+Plugin 'ap/vim-css-color'
 
 " Also provides code-snippets
-Bundle 'drmingdrmer/xptemplate'
+Plugin 'drmingdrmer/xptemplate'
 
 " Taskwarrior
-" Bundle "farseer90718/vim-taskwarrior"
+" Plugin "farseer90718/vim-taskwarrior"
+
+" Vim Angular
+"Plugin "burnettk/vim-angular"
+
+"Javascript syntax 
+"Plugin "pangloss/vim-javascript"
+
+" Typescript stuff
+"Plugin "leafgarland/typescript-vim"
+"Typescript syntax
+"Plugin "herringtondarkholme/yats.vim"
 
 " Color schemes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'cschlueter/vim-mustang'
-Bundle 'sjl/badwolf'
-Bundle 'whatyouhide/vim-gotham'
-Bundle 'morhetz/gruvbox'
-Bundle 'zeis/vim-kolor'
-Bundle 'tomasr/molokai'
-Bundle 'jpo/vim-railscasts-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'cschlueter/vim-mustang'
+Plugin 'sjl/badwolf'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'morhetz/gruvbox'
+Plugin 'zeis/vim-kolor'
+Plugin 'tomasr/molokai'
+Plugin 'jpo/vim-railscasts-theme'
 
 call vundle#end()
 filetype plugin indent on             " required for Vundle to work

@@ -1,5 +1,7 @@
 set nocompatible
 filetype off
+
+let g:javascript_plugin_jsdoc = 1
                                 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -19,6 +21,10 @@ Plugin 'tpope/vim-fugitive'
 
 " Provides markdown support
 Plugin 'tpope/vim-markdown'
+
+" Show pretty bar in bottom
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Provides git status in gutter
 Plugin 'airblade/vim-gitgutter'
@@ -48,13 +54,13 @@ Plugin 'mileszs/ack.vim'
 Plugin 'sandeepcr529/Buffet.vim'
 
 " Provides code-snippets
-" Plugin 'msanders/snipmate.vim'
+Plugin 'msanders/snipmate.vim'
+
+"Collection of snippets
+Plugin 'honza/vim-snippets'
 
 " Provides css coloring, awesome
 Plugin 'ap/vim-css-color'
-
-" Also provides code-snippets
-Plugin 'drmingdrmer/xptemplate'
 
 " Taskwarrior
 " Plugin "farseer90718/vim-taskwarrior"
@@ -67,8 +73,12 @@ Plugin 'pangloss/vim-javascript'
 
 " Typescript stuff
 Plugin 'leafgarland/typescript-vim'
+
 "Typescript syntax
 Plugin 'herringtondarkholme/yats.vim'
+
+"Jasmine assistance
+Plugin 'claco/jasmine.vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
@@ -255,6 +265,9 @@ let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+
+let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
 
 " abbrevations: replaces mistypes in insert mode
 iab Seperate Separate

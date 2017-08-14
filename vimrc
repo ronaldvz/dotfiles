@@ -1,10 +1,8 @@
 set nocompatible
-filetype on
+filetype off
                                 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-"let g:javascript_plugin_jsdoc = 1
 
 " Vundle manages the plugins 
 Plugin 'gmarik/vundle'
@@ -62,15 +60,15 @@ Plugin 'drmingdrmer/xptemplate'
 " Plugin "farseer90718/vim-taskwarrior"
 
 " Vim Angular
-"Plugin "burnettk/vim-angular"
+Plugin 'burnettk/vim-angular'
 
 "Javascript syntax 
-"Plugin "pangloss/vim-javascript"
+Plugin 'pangloss/vim-javascript'
 
 " Typescript stuff
-"Plugin "leafgarland/typescript-vim"
+Plugin 'leafgarland/typescript-vim'
 "Typescript syntax
-"Plugin "herringtondarkholme/yats.vim"
+Plugin 'herringtondarkholme/yats.vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
@@ -92,7 +90,8 @@ set t_Co=256
 let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme gruvbox
 
 set clipboard=unnamed
 
@@ -232,7 +231,7 @@ let delimitMate_expand_cr = 1
 :nmap <S-b> :Bufferlist<CR>
 
 " NERDTree
-let NERDTreeWinSize=50
+let NERDTreeWinSize=30
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_autoclose=1
@@ -250,6 +249,12 @@ if has ("autocmd")
 endif
 
 set tags=~/.tags
+
+"typescript settings: show errors
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " abbrevations: replaces mistypes in insert mode
 iab Seperate Separate

@@ -65,10 +65,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 #bindsym # start dmenu (a program launcher)
-#bindsym $mod+d exec rofi -show run -lines 5 -padding 2 -font "Source Code Pro 12" -bw "#121212" -eh 1 -color-enabled -line-margin 2 -hide-scrollbar -width 20
-#bindsym $mod+space exec rofi -show run -lines 5 -padding 2 -font "Source Code Pro 12" -bw "#121212" -eh 1 -color-enabled -line-margin 2 -hide-scrollbar -width 20
-bindsym $mod+d exec rofi -show run -lines 10
-bindsym $mod+space exec rofi -show run -lines 10
+bindsym $mod+space exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left

@@ -2,7 +2,9 @@ set nocompatible
 filetype off
 
 let g:javascript_plugin_jsdoc = 1
-                                
+"set guifont=Literation\ Mono\ Powerline\ 10 
+set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
+  
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -212,15 +214,6 @@ let g:ctrlp_cmd = 'CtrlP'
 " disable CTRL-P caching
 let g:ctrlp_use_caching=0
 
-" Powerline settings
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set encoding=utf-8
-let g:Powerline_symbols = 'fancy'
-" always display powerline in all windows
-set laststatus=2
-" hide default text mode text (e.g. -- INSERT -- below the statusline
-set noshowmode
-
 " vim-fugitive
 nmap ,gs :Gstatus<CR>
 nmap ,gw :Gwrite<CR>
@@ -272,3 +265,21 @@ let g:airline_powerline_fonts = 1
 " abbrevations: replaces mistypes in insert mode
 iab Seperate Separate
 iab seperate separate
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'

@@ -34,9 +34,6 @@ Plugin 'airblade/vim-gitgutter'
 " Changes to working directory to the directory of the opened file
 Plugin 'airblade/vim-rooter'
 
-" Provides nice looking bottom bar
-"" Plugin 'Lokaltog/powerline'
-
 " Provides tagbar on rightside
 Plugin 'majutsushi/tagbar'
 
@@ -72,6 +69,14 @@ Plugin 'burnettk/vim-angular'
 
 "Javascript syntax 
 Plugin 'pangloss/vim-javascript'
+
+"
+Plugin 'Shougo/vimproc.vim'
+
+" Very nice typescript support addon (completion and others))
+Plugin 'Quramy/tsuquyomi'
+
+Plugin 'Valloric/YouCompleteMe'
 
 " Typescript stuff
 Plugin 'leafgarland/typescript-vim'

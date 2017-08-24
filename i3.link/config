@@ -53,7 +53,8 @@ set $orange #d26937
 # chose an xft font, such as:
 # font xft:DejaVu Sans Mono 10
 #
-font pango:Source Code Pro 8
+#font pango:Source Code Pro 8
+font pango:Monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -145,8 +146,6 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # scrot & gimp - root (take screenshot)
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
@@ -205,7 +204,23 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+Shift+Delete exec ~/.scripts/lock.sh
 
 # Go to urgent window
-bindsym $mod+x [urgent=latest] focus
+#bindsym $mod+x [urgent=latest] focus
+
+# System Mode: mod + x to lock/logout/reboot/shutdown
+bindsym $mod+x mode "$mode_system"
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/.i3/i3exit lock, mode "default"
+    bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
+    bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
+    bindsym x exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 #Window colors
 #                         border  background text    indicator
@@ -217,7 +232,8 @@ client.urgent 						$base02 $base08 	 $base00 $base0F
 # Bar
   bar {
     #font pango: System San Francisco Display 11, FontAwesome 11
-    font pango: Source Code Pro 8, FontAwesome 10
+    font pango: Source Code Pro 10, FontAwesome 10
+
     status_command i3blocks
     position bottom
     bindsym button4 nop
@@ -249,15 +265,10 @@ assign [class = "Thunar"] $workspace5
 exec --no-startup-id dunst
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale /home/ronald/Pictures/Wallpapers/yellow-paper.jpeg
+exec --no-startup-id feh --bg-scale /home/ronald/Pictures/Wallpapers/bgg.jpg
 
 # Reverse scrolling to natural
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -115 -115
 
 # Start nm-applet
-#exec --no-startup-id nm-applet
-
-# Start caffeine indicator
-#exec --no-startup-id caffeine-indicator
-
-exec --no-startup-id "devmon -no-gui"
+exec --no-startup-id nm-applet

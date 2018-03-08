@@ -8,12 +8,14 @@
 ;=====================================================
 
 [colors]
+;background = #222
 background = #222
 background-alt = #444
 ;foreground = #dfdfdf
-foreground = #d6d6d6
-foreground-alt = #ddd
-primary = #5129ff
+foreground = #eee
+foreground-alt = #D99707
+primary = #D99707
+
 secondary = #e60053
 alert = #bd2c40
 
@@ -39,7 +41,8 @@ foreground = ${colors.foreground}
 overline-size = 2
 overline-color = #f00
 underline-size = 2
-underline-color = #00f
+;underline-color = #00f
+underline-color = #D99707
 
 border-bottom-size = 1
 border-bottom-color = #333
@@ -80,7 +83,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 label-layout = %{F#55}%{F-} %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.primary}
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
@@ -92,8 +95,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %mountpoint%: %free%
-
+label-mounted = %{F#D99707}%mountpoint%:%{F-} %free%
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -317,7 +319,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format =  <ramp> <label>
+format = %{F#D99707} %{F-}<ramp> <label>
 format-underline = 
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}

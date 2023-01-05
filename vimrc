@@ -53,7 +53,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'sandeepcr529/Buffet.vim'
 
 " Provides code-snippets
-Plugin 'msanders/snipmate.vim'
+" Plugin 'msanders/snipmate.vim'
 
 "Collection of snippets
 Plugin 'honza/vim-snippets'
@@ -76,7 +76,7 @@ Plugin 'Shougo/vimproc.vim'
 " Very nice typescript support addon (completion and others))
 Plugin 'Quramy/tsuquyomi'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Typescript stuff
 Plugin 'leafgarland/typescript-vim'

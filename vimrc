@@ -2,14 +2,14 @@ set nocompatible
 filetype off
 
 let g:javascript_plugin_jsdoc = 1
-"set guifont=Literation\ Mono\ Powerline\ 10 
+"set guifont=Literation\ Mono\ Powerline\ 10
 set guifont=Sourme\ Code\ Pro\ for\ Powerline\ 10
 "set guifont=Font\ Awesome\ 6\ Free\ 10
-  
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle manages the plugins 
+" Vundle manages the plugins
 Plugin 'gmarik/vundle'
 
 " Provides 'open resource' functionality
@@ -50,7 +50,7 @@ Plugin 'Raimondi/delimitMate'
 " Provides filesearch within current directory (ack needs to be installed)
 Plugin 'mileszs/ack.vim'
 
-" Provides nice overview of open buffers 
+" Provides nice overview of open buffers
 Plugin 'sandeepcr529/Buffet.vim'
 
 " Provides code-snippets
@@ -68,7 +68,7 @@ Plugin 'ap/vim-css-color'
 " Vim Angular
 Plugin 'burnettk/vim-angular'
 
-"Javascript syntax 
+"Javascript syntax
 Plugin 'pangloss/vim-javascript'
 
 "
@@ -115,10 +115,10 @@ set clipboard=unnamed
 
 " Add $ sign to visualize what i'm changing (when using 'c'). Thanks to Derek
 " Wyatt's video on Vimeo. Awesome feature!
-set cpoptions+=$                      
+set cpoptions+=$
 
 " Prevent 'sound': no beeping (virtualbell)
-set vb 
+set vb
 
 " Nr of spaces when hitting 'tab'
 set tabstop=2
@@ -127,35 +127,35 @@ set shiftwidth=2
 set softtabstop=2
 
 " Use spaces, not tabs
-set expandtab                         
+set expandtab
 
 " Highlight searchhits
-set hlsearch                          
+set hlsearch
 
 " Searchs are incremental
-set incsearch                         
+set incsearch
 
 " Searches are case insensitive...
-set ignorecase                        
+set ignorecase
 
 " ...unless they contain at least one capital letter
-set smartcase                         
+set smartcase
 
 " Enables line numbers
-set number                            
+set number
 
 " Automatically indent
-set autoindent                        
+set autoindent
 
 " Do smart indenting
 set smartindent
 
 " backspace through everything in insert mode
-set backspace=indent,eol,start        
+set backspace=indent,eol,start
 set linespace=6
 
 " Autoread changed files
-set autoread                          
+set autoread
 
 " Setting backup dirs and disabling swapping
 set backupdir=~/.vim/backup//         " where to put backup files.
@@ -166,9 +166,9 @@ set noswapfile                        " disable swap files
 " Hide the mouse pointer while typing(!)
 set mousehide
 
-" --------------------------------- 
+" ---------------------------------
 " ---------- Keybindings ----------
-" --------------------------------- 
+" ---------------------------------
 " Ctrl-N to enable / disable line numbers
 :nnoremap <C-N><C-N> :set invnumber<CR>
 
@@ -192,10 +192,10 @@ nmap <silent> ,. :bnext<CR>
 nmap <silent> ,m :bprev<CR>
 
 " Go to next tab
-nmap <silent> ;' :tabnext<CR> 
+nmap <silent> ;' :tabnext<CR>
 
 " Go to previous tab
-nmap <silent> ;l :tabprev<CR> 
+nmap <silent> ;l :tabprev<CR>
 
 " Key for toggling search highlighting.
 :noremap ,h :set hlsearch! hlsearch?<CR>
@@ -228,7 +228,7 @@ nmap ,gd :Gdiff<CR>
 nmap ,gc :Gcommit<CR>
 
 " Delimitmate setting: add an extra line after expanding my opening quote
-let delimitMate_expand_cr = 1         
+let delimitMate_expand_cr = 1
 
 " TagBar settings
 :nmap <C-t>  :TagbarToggle<CR>
@@ -247,13 +247,13 @@ let g:nerdtree_tabs_autoclose=1
 let g:nerdtree_tabs_synchronize_view=1
 
 " Open NERDTree
-map <C-n> :NERDTreeToggle<CR> 
+map <C-n> :NERDTreeToggle<CR>
 
 " Find the currently open file in NERDTree
 map <C-f> :NERDTreeFind<CR>
 
 " Set filetype to markdown on markdown files
-if has ("autocmd") 
+if has ("autocmd")
   autocmd BufNewFile,BufRead *.markdown,*.mdown,*.md set filetype=markdown
 endif
 

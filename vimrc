@@ -3,7 +3,8 @@ filetype off
 
 let g:javascript_plugin_jsdoc = 1
 "set guifont=Literation\ Mono\ Powerline\ 10 
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
+set guifont=Sourme\ Code\ Pro\ for\ Powerline\ 10
+"set guifont=Font\ Awesome\ 6\ Free\ 10
   
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

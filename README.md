@@ -25,8 +25,8 @@ This repo contains a cumulation of the .files I'm using on my machine(s).
 - `chmod +x ~/.skhdrc`
 
 # Steps spacebar
-- 'brew install cmacrae/formulae/spacebar'
-- 'brew services start spacebar`
+- `brew install cmacrae/formulae/spacebar`
+- `brew services start spacebar`
 - `brew install homebrew/cask-fonts/font-fontawesome`
 - `mkdir -p ~/.config/spacebar`
 - `ln -s ~/.dotfiles/spacebar/spacebarrc ~/.config/spacebar/spacebarrc`

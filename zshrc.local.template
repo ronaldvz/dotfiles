@@ -1,4 +1,0 @@
-#
-# templatefile for new local zshrc files
-#
-alias machine='ssh -i ~/.ssh/name-of-keyfile username@ip-or-dns'

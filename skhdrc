@@ -105,6 +105,7 @@ ctrl + alt - l : yabai -m window --resize right:30:0 ; yabai -m window --resize 
 # cycle window focus with Ctrl and J/K
 ctrl - j : ~/cycle-window.sh
 
+shift + cmd - t : wezterm
 
 # restart yabai
 #ctrl + alt + cmd - r :launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"

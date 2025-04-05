@@ -1,60 +1,15 @@
-# 
-# ronald's zsh config
-#
-# Most of this has been shamelessly 'stolen' from:
-# - https://github.com/mattijs/.files
-#
-ZSH="$HOME/.dotfiles/zsh"
-
-C=$(tput colors)
-
-# setting default path, with ~/bin dir up front
-PATH="$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/sbin:/usr/local/bin:$PATH"
-
-export EDITOR=vim
-export BROWSER=google-chrome
-
-#set options
-source $ZSH/options.zsh
-
-autoload -Uz colors promptinit zmv zargs vcs_info
-colors && promptinit
-
-case $TERM in
-    *xterm*|*rxvt*|*screen*)
-        # Special function precmd, executed before displaying each prompt.
-        function precmd() {
-            # Set the terminal title to the current working directory.
-            print -Pn "\e]0;%n@%m:%~\a"
-
-            # Get the current git branch into the prompt.
-            vcs_info
-        }
-
-        # Special function preexec, executed before running each command.
-        function preexec () {
-            # Set the terminal title to the curently running command.
-            print -Pn "\e]2;[${2:q}]\a"
-        }
-esac
-
-## load aliases
-source $ZSH/aliases.zsh
-
-source $ZSH/functions.zsh
-
-source $ZSH/prompt.zsh
-
-source $ZSH/completion.zsh
-
-source $ZSH/keybindings.zsh
-
-# ###
-# Check for local .zshrc configuration at `~/.zshrc.local`
-# ###
-if [[ -a $HOME/.zshrc.local ]];
-then
- source $HOME/.zshrc.local
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.dotfiles/zsh/aliases.zsh
+
+alias ..='cd ..'
+
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet

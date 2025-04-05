@@ -22,15 +22,15 @@ alt + shift - up : yabai -m window --swap north || $(yabai -m window --display n
 alt + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
 # set insertion point in focused container
-alt + ctrl - h : yabai -m window --insert west
-alt + ctrl - j : yabai -m window --insert south
-alt + ctrl - k : yabai -m window --insert north
-alt + ctrl - l : yabai -m window --insert east
+#alt + ctrl - h : yabai -m window --insert west
+#alt + ctrl - j : yabai -m window --insert south
+#alt + ctrl - k : yabai -m window --insert north
+#alt + ctrl - l : yabai -m window --insert east
 # (alt) set insertion point in focused container using arrows
-alt + ctrl - left  : yabai -m window --insert west
-alt + ctrl - down  : yabai -m window --insert south
-alt + ctrl - up    : yabai -m window --insert north
-alt + ctrl - right : yabai -m window --insert east
+#alt + ctrl - left  : yabai -m window --insert west
+#alt + ctrl - down  : yabai -m window --insert south
+#$alt + ctrl - up    : yabai -m window --insert north
+#alt + ctrl - right : yabai -m window --insert east
 
 # go back to previous workspace (kind of like back_and_forth in i3)
 alt - b : yabai -m space --focus recent
@@ -66,6 +66,8 @@ alt - l : yabai -m space --layout float
 alt - s : yabai -m space --layout stack
 
 
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
 # cycle through stack windows
 # alt - p : yabai -m window --focus stack.next || yabai -m window --focus south
 # alt - n : yabai -m window --focus stack.prev || yabai -m window --focus north
@@ -92,3 +94,17 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 alt + shift - f : yabai -m window --toggle native-fullscreen
+
+# resizing windows with Ctrl, Option and HJKL
+ctrl + alt - h : yabai -m window --resize left:-30:0 ; yabai -m window --resize right:-30:0
+ctrl + alt - j : yabai -m window --resize bottom:0:30 ; yabai -m window --resize top:0:30
+ctrl + alt - k : yabai -m window --resize top:0:-30 ; yabai -m window --resize bottom:0:-30
+ctrl + alt - l : yabai -m window --resize right:30:0 ; yabai -m window --resize left:30:0
+
+
+# cycle window focus with Ctrl and J/K
+ctrl - j : ~/cycle-window.sh
+
+
+# restart yabai
+#ctrl + alt + cmd - r :launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"

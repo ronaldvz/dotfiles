@@ -1,5 +1,7 @@
 alias ..='cd ..'
 
+alias yr='yabai --stop-service && yabai --start-service'
+
 #ls aliases
 alias ls='ls -lhGs'
 alias la='ls -lhGsa'

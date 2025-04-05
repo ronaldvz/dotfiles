@@ -109,6 +109,7 @@ let g:solarized_termtrans = 1
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "colorscheme railscasts
+"colorscheme gruvbox 
 colorscheme gruvbox
 
 set clipboard=unnamed

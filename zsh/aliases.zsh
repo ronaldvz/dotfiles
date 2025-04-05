@@ -10,6 +10,7 @@ alias lsa='ls -all'
 
 #git aliases
 alias g='git'
+alias gc='git commit'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
